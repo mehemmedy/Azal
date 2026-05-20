@@ -872,6 +872,124 @@
                 </div>
             </div>
         </div>
+        <div id="service-detail" class="mt-6 w-full overflow-hidden rounded-[20px] border border-gray-100 bg-white shadow-sm">
+
+  <!-- HEADER -->
+  <div class="relative overflow-hidden bg-[#0f4c81] px-6 py-5">
+    <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/5"></div>
+    <div class="absolute -bottom-8 right-16 h-24 w-24 rounded-full bg-white/[0.04]"></div>
+
+    <div class="relative z-10 flex items-start justify-between gap-4">
+      <div class="flex items-start gap-4">
+        <div id="detail-icon" class="flex h-13 w-13 shrink-0 items-center justify-center rounded-[14px] bg-white/15">
+          <i class="fas fa-chair text-xl text-white"></i>
+        </div>
+
+        <div>
+          <div class="mb-1.5 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-0.5 text-[11px] font-medium text-white">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-300"></span>
+            Aktiv xidmət
+          </div>
+          <h3 id="detail-title" class="text-xl font-medium leading-tight text-white">Yer seçimi</h3>
+          <p id="detail-subtitle" class="mt-1 max-w-md text-[13px] leading-snug text-white/75">
+            Uçuşunuz üçün daha rahat oturacaq seçin və səyahətinizi öz zövqünüzə uyğunlaşdırın.
+          </p>
+        </div>
+      </div>
+
+      <div class="hidden shrink-0 rounded-xl bg-white/10 px-3.5 py-2.5 text-right md:block">
+        <div class="text-[11px] text-white/65">Xidmət statusu</div>
+        <div class="mt-0.5 text-[13px] font-medium text-white">Hazırdır</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="grid gap-5 p-5 lg:grid-cols-[1.4fr_0.9fr]">
+
+    <!-- SOL HİSSƏ -->
+    <div>
+      <div id="detail-chips" class="mb-4 flex flex-wrap gap-1.5">
+        <span class="rounded-full bg-blue-50 px-3 py-1 text-[12px] font-medium text-blue-700">Rahatlıq</span>
+        <span class="rounded-full bg-blue-50 px-3 py-1 text-[12px] font-medium text-blue-700">Sürətli seçim</span>
+        <span class="rounded-full bg-blue-50 px-3 py-1 text-[12px] font-medium text-blue-700">Səyahət öncəsi</span>
+      </div>
+
+      <p id="detail-text" class="text-[14px] leading-relaxed text-gray-500">
+        Uçuşunuz üçün istədiyiniz oturacağı əvvəlcədən seçin və rahat səyahət edin.
+      </p>
+
+      <div class="mt-4 grid grid-cols-3 gap-2">
+        <div class="rounded-xl border border-gray-100 bg-gray-50 p-3">
+          <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400">Üstünlük</div>
+          <div id="detail-stat-1" class="mt-1 text-[13px] font-medium text-gray-800">Daha rahat uçuş</div>
+        </div>
+        <div class="rounded-xl border border-gray-100 bg-gray-50 p-3">
+          <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400">Vaxt</div>
+          <div id="detail-stat-2" class="mt-1 text-[13px] font-medium text-gray-800">Check-in sürətli</div>
+        </div>
+        <div class="rounded-xl border border-gray-100 bg-gray-50 p-3">
+          <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400">Uyğunluq</div>
+          <div id="detail-stat-3" class="mt-1 text-[13px] font-medium text-gray-800">Biletə əlavə olunur</div>
+        </div>
+      </div>
+
+      <div class="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4">
+        <div class="mb-3 text-[13px] font-medium text-gray-800">Bu xidmətdə nələr var?</div>
+        <div id="detail-features" class="grid grid-cols-2 gap-2">
+          <div class="flex items-center gap-2 rounded-lg border border-gray-100 bg-white px-3 py-2.5">
+            <i class="fas fa-check-circle text-[15px] text-blue-600"></i>
+            <span class="text-[13px] text-gray-700">Sürətli aktivləşdirmə</span>
+          </div>
+          <div class="flex items-center gap-2 rounded-lg border border-gray-100 bg-white px-3 py-2.5">
+            <i class="fas fa-check-circle text-[15px] text-blue-600"></i>
+            <span class="text-[13px] text-gray-700">Rahat istifadə</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAĞ HİSSƏ -->
+    <div class="rounded-xl border border-gray-100 bg-gray-50 p-4">
+      <div class="mb-4 flex items-start justify-between gap-2">
+        <div>
+          <div class="text-[10px] font-medium uppercase tracking-widest text-gray-400">Sürətli baxış</div>
+          <div id="detail-side-title" class="mt-1 text-[15px] font-medium text-gray-800">Yer seçimi</div>
+        </div>
+        <span class="shrink-0 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-medium text-green-700">
+          Tövsiyə olunur
+        </span>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <div class="rounded-xl border border-gray-100 bg-white p-3.5">
+          <div class="text-[11px] text-gray-400">Açıqlama</div>
+          <div id="detail-side-text" class="mt-1 text-[13px] leading-snug text-gray-700">
+            Uçuşunuz üçün istədiyiniz oturacağı əvvəlcədən seçin.
+          </div>
+        </div>
+        <div class="rounded-xl border border-gray-100 bg-white p-3.5">
+          <div class="text-[11px] text-gray-400">Fayda</div>
+          <div id="detail-benefit" class="mt-1 text-[13px] font-medium text-gray-800">Daha komfortlu və planlı səyahət</div>
+        </div>
+        <div class="rounded-xl border border-gray-100 bg-white p-3.5">
+          <div class="text-[11px] text-gray-400">Uyğunluq</div>
+          <div id="detail-compatibility" class="mt-1 text-[13px] font-medium text-gray-800">Bütün əsas uçuşlara əlavə edilə bilər</div>
+        </div>
+      </div>
+
+      <div class="mt-4 flex gap-2">
+        <button id="detail-btn" class="flex-1 rounded-xl bg-[#0f4c81] px-4 py-2.5 text-[13px] font-medium text-white transition hover:bg-[#0c3f6b]">
+          Xidməti seç
+        </button>
+        <button class="rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-[13px] font-medium text-gray-700 transition hover:bg-gray-100">
+          Ətraflı
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
     </header>
 
     <!-- ===== STATS STRIP (YENİ) ===== -->

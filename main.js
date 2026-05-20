@@ -139,3 +139,150 @@ document.addEventListener('click', function(e) {
     document.getElementById('currency-chevron').style.transform = '';
   }
 });
+
+
+const services = {
+        "Yer seçimi": {
+            icon: "fa-chair",
+            title: "Yer seçimi",
+            subtitle: "Öncədən oturacaq seçib daha rahat səyahət edin.",
+            text: "Uçuşunuz üçün istədiyiniz oturacağı əvvəlcədən seçin. Pəncərə kənarı, koridor və ya birlikdə oturma kimi seçimlərlə səfərinizi özünüzə uyğunlaşdırın.",
+            button: "Yer seç",
+            chips: ["Rahatlıq", "Sürətli seçim", "Səyahət öncəsi"],
+            stat1: "Daha rahat uçuş",
+            stat2: "Check-in zamanı sürətli",
+            stat3: "Biletə əlavə olunur",
+            features: ["Pəncərə / koridor seçimi", "Ailə ilə birlikdə oturma", "Uçuşdan əvvəl təsdiq"],
+            benefit: "Uçuş boyu rahatlıq",
+            compatibility: "Əksər reyslərdə aktivdir"
+        },
+        "AZAL Upgrade": {
+            icon: "fa-arrow-up",
+            title: "AZAL Upgrade",
+            subtitle: "Economy-dən daha yüksək komfort səviyyəsinə keçin.",
+            text: "Mövcud biletinizi upgrade edərək daha geniş oturacaq, əlavə komfort və daha xoş uçuş təcrübəsi əldə edin.",
+            button: "Upgrade et",
+            chips: ["Komfort", "Premium hiss", "Daha geniş yer"],
+            stat1: "Yüksək komfort",
+            stat2: "Daha geniş oturacaq",
+            stat3: "Ödənişli seçim",
+            features: ["Daha rahat oturacaq", "Prioritet üstünlüklər", "Premium uçuş təcrübəsi"],
+            benefit: "Daha sakit və komfortlu səyahət",
+            compatibility: "Seçilmiş reyslərdə mövcuddur"
+        },
+        "Avtomobil icarəsi": {
+            icon: "fa-car",
+            title: "Avtomobil icarəsi",
+            subtitle: "Təyinat yerində sərbəst hərəkət edin.",
+            text: "Səfər etdiyiniz şəhərdə sizə uyğun avtomobili əvvəlcədən bron edin. Hava limanından çıxan kimi avtomobilinizi götürüb yolunuza rahat davam edin.",
+            button: "Avtomobil seç",
+            chips: ["Sərbəstlik", "Rahat nəqliyyat", "Şəhər içi"],
+            stat1: "Səyahət sonrası rahatlıq",
+            stat2: "İstədiyin modeli seç",
+            stat3: "Bronla hazır olur",
+            features: ["Müxtəlif model seçimləri", "Hava limanından götürmə", "Gündəlik / həftəlik icarə"],
+            benefit: "Vaxta qənaət",
+            compatibility: "Təyinat şəhərlərində aktivdir"
+        },
+        "Otel bron edin": {
+            icon: "fa-hotel",
+            title: "Otel bron edin",
+            subtitle: "Səfəriniz üçün uyğun qalacaq yer tapın.",
+            text: "Səyahət planınıza uyğun otelləri müqayisə edib seçim edin. Büdcəyə uyğun, mərkəzə yaxın və komfortlu qalmaq üçün ideal variantlar bir yerdədir.",
+            button: "Otel seç",
+            chips: ["Qalacaq yer", "Büdcəyə uyğun", "Rahatlıq"],
+            stat1: "Ən uyğun otel",
+            stat2: "Müqayisəli seçim",
+            stat3: "Sürətli rezerv",
+            features: ["Fərqli qiymət aralığı", "Məkan üzrə seçim", "Sərfəli paketlər"],
+            benefit: "Səyahət planını tamamlamaq",
+            compatibility: "Dünyanın bir çox şəhərində"
+        },
+        "Turlar": {
+            icon: "fa-umbrella-beach",
+            title: "Turlar",
+            subtitle: "Səyahətinizə maraqlı əlavə edin.",
+            text: "Gəzinti, ekskursiya və yerli təcrübələri bir kliklə seçin. Gedəcəyiniz yeri daha yaxşı tanımaq və vaxtı səmərəli keçirmək üçün ideal seçimdir.",
+            button: "Turlara bax",
+            chips: ["Ekskursiya", "Əyləncə", "Yeni təcrübə"],
+            stat1: "Maraqlı marşrutlar",
+            stat2: "Bələdçi ilə seçim",
+            stat3: "Qısa və ya uzun tur",
+            features: ["Şəhər turları", "Mədəniyyət marşrutları", "Ailəvi istirahət paketləri"],
+            benefit: "Səyahəti daha yaddaqalan edir",
+            compatibility: "Seçilmiş istiqamətlərdə mövcuddur"
+        },
+        "Əlavə bağaj": {
+            icon: "fa-suitcase",
+            title: "Əlavə bağaj",
+            subtitle: "Lazım olan hər şeyi rahatlıqla aparın.",
+            text: "Bagaj limitiniz yetmirsə, əlavə bağaj alaraq bütün əşyalarınızı rahat şəkildə özünüzlə götürə bilərsiniz.",
+            button: "Bağaj əlavə et",
+            chips: ["Daha çox yer", "Rahat səyahət", "Əlavə seçim"],
+            stat1: "Yüklə rahat",
+            stat2: "Limit artır",
+            stat3: "Sürətli əlavə",
+            features: ["Çəki limitini artır", "Onlayn əlavə et", "Gedişdən əvvəl hazırla"],
+            benefit: "Əşyalar üçün daha çox yer",
+            compatibility: "Əksər biletlərdə mümkündür"
+        }
+    };
+
+    const cards = document.querySelectorAll(".service-card");
+
+    const iconBox = document.getElementById("detail-icon");
+    const title = document.getElementById("detail-title");
+    const subtitle = document.getElementById("detail-subtitle");
+    const text = document.getElementById("detail-text");
+    const btn = document.getElementById("detail-btn");
+    const sideTitle = document.getElementById("detail-side-title");
+    const sideText = document.getElementById("detail-side-text");
+    const benefit = document.getElementById("detail-benefit");
+    const compatibility = document.getElementById("detail-compatibility");
+    const chipsBox = document.getElementById("detail-chips");
+    const featuresBox = document.getElementById("detail-features");
+    const stat1 = document.getElementById("detail-stat-1");
+    const stat2 = document.getElementById("detail-stat-2");
+    const stat3 = document.getElementById("detail-stat-3");
+
+    function renderService(name) {
+        const service = services[name];
+        if (!service) return;
+
+        iconBox.innerHTML = `<i class="fas ${service.icon} text-2xl"></i>`;
+        title.innerText = service.title;
+        subtitle.innerText = service.subtitle;
+        text.innerText = service.text;
+        btn.innerText = service.button;
+        sideTitle.innerText = service.title;
+        sideText.innerText = service.text;
+        benefit.innerText = service.benefit;
+        compatibility.innerText = service.compatibility;
+        stat1.innerText = service.stat1;
+        stat2.innerText = service.stat2;
+        stat3.innerText = service.stat3;
+
+        chipsBox.innerHTML = service.chips.map(ch =>
+            `<span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">${ch}</span>`
+        ).join("");
+
+        featuresBox.innerHTML = service.features.map(item =>
+            `<div class="flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-sm">
+                <i class="fas fa-check-circle text-blue-600"></i>
+                <span class="text-sm text-gray-700">${item}</span>
+            </div>`
+        ).join("");
+
+        cards.forEach(c => c.classList.remove("ring-2", "ring-blue-500", "scale-[1.02]"));
+        const activeCard = [...cards].find(c => c.querySelector("span")?.innerText === name);
+        if (activeCard) activeCard.classList.add("ring-2", "ring-blue-500", "scale-[1.02]");
+    }
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            const serviceName = card.querySelector("span").innerText;
+            renderService(serviceName);
+        });
+    });
+
+    renderService("Yer seçimi");
